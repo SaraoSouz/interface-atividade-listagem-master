@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import NavBar from '../../components/NavBar';
-import styles from './FIFA.module.css'; // Importe os estilos do arquivo CSS
+import styles from './FIFA.module.css';  
 
 const BASE_URL = 'http://10.90.2.119:3333';
-const ITEMS_PER_PAGE = 10; // Defina o número de itens por página
+const ITEMS_PER_PAGE = 10;  
 
 function CardFifa() {
     const [players, setPlayers] = useState([]);
@@ -22,17 +22,17 @@ function CardFifa() {
         fetchPlayers();
     }, []);
 
-    // Calcular índices dos itens a serem exibidos na página atual
+    
     const indexOfLastItem = currentPage * ITEMS_PER_PAGE;
     const indexOfFirstItem = indexOfLastItem - ITEMS_PER_PAGE;
     const currentItems = players.slice(indexOfFirstItem, indexOfLastItem);
 
-    // Mudar para a próxima página
+    
     const nextPage = () => {
         setCurrentPage(currentPage + 1);
     };
 
-    // Mudar para a página anterior
+    
     const prevPage = () => {
         setCurrentPage(currentPage - 1);
     };
@@ -52,11 +52,11 @@ function CardFifa() {
                     </div>
                 ))}
             </div>
-            {/* Botões de páginação */}
+           
             <div>
-                <button onClick={prevPage} disabled={currentPage === 1}>Anterior</button>
-                <span>Página {currentPage}</span>
-                <button onClick={nextPage} disabled={indexOfLastItem >= players.length}>Próxima</button>
+                <button onClick={prevPage} disabled={currentPage === 1}>Back</button>
+                <span>Page {currentPage}</span>
+                <button onClick={nextPage} disabled={indexOfLastItem >= players.length}>Next</button>
             </div>
         </div>
     );

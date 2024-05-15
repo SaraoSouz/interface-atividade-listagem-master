@@ -1,4 +1,4 @@
-/* Amazon.module.css */
+
 
 .cardContainer {
     display: flex;
@@ -7,12 +7,12 @@
 }
 
 .card {
-    border: 1px solid #ccc;
+    border: 1px solid #f5bebe;
     border-radius: 5px;
     padding: 10px;
     margin: 10px;
     width: 250px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(219, 22, 190, 0.616);
 }
 
 .card h3 {
@@ -51,26 +51,25 @@
     background-color: #ddd;
 }
 
-/* Adicione esta parte ao seu arquivo Amazon.module.css */
+
 
 .buttonGroup {
     margin-top: 20px;
     display: flex;
-    justify-content: center;
+    justify-items: center;
 }
 
 .buttonGroup button {
-    margin: 0 5px;
+    margin: 50px;
     padding: 10px 20px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
+    background-color: #9c0fb8;
+    color: blueviolet;
     border-radius: 5px;
     cursor: pointer;
 }
 
 .buttonGroup button:hover {
-    background-color: #0056b3;
+    background-color: blueviolet;
 }
 
 .buttonGroup button:disabled {

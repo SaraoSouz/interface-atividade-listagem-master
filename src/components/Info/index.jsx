@@ -16,6 +16,7 @@ function Info() {
                 A última são filmes e séries do catálogo da Netflix <br />
                 Para mais informações sobre a tarefa, consulte o arquivo README.md na raiz do projeto.
             </p>
+            
         </>
     );
 }

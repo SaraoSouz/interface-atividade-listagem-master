@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import styles from './Amazon.module.css'; // Importe os estilos do arquivo CSS
+import styles from './Amazon.module.css'; 
 import NavBar from '../../components/NavBar';
 
 const BASE_URL = 'http://10.90.2.119:3333';
-const ITEMS_PER_PAGE = 10; // Defina o número de itens por página
+const ITEMS_PER_PAGE = 10; 
 
 function CardAmazon() {
     const [vendas, setVendas] = useState([]);
@@ -22,17 +22,17 @@ function CardAmazon() {
         fetchVendas();
     }, []);
 
-    // Calcular índices dos itens a serem exibidos na página atual
+    
     const indexOfLastItem = currentPage * ITEMS_PER_PAGE;
     const indexOfFirstItem = indexOfLastItem - ITEMS_PER_PAGE;
     const currentItems = vendas.slice(indexOfFirstItem, indexOfLastItem);
 
-    // Mudar para a próxima página
+   
     const nextPage = () => {
         setCurrentPage(currentPage + 1);
     };
 
-    // Mudar para a página anterior
+    
     const prevPage = () => {
         setCurrentPage(currentPage - 1);
     };
@@ -40,7 +40,7 @@ function CardAmazon() {
     return (
         <div className={styles.container}>
             <NavBar />
-            <h1>Cards de Vendas (Amazon)</h1>
+            <h1 className='Nm'>Livros Best-sellers</h1>
             <div className={styles.cardContainer}>
                 {currentItems.map(venda => (
                     <div key={venda.id_livro} className={styles.card}>
@@ -51,11 +51,11 @@ function CardAmazon() {
                     </div>
                 ))}
             </div>
-            {/* Botões de páginação */}
+           
             <div>
-                <button onClick={prevPage} disabled={currentPage === 1}>Anterior</button>
-                <span>Página {currentPage}</span>
-                <button onClick={nextPage} disabled={indexOfLastItem >= vendas.length}>Próxima</button>
+                <button onClick={prevPage} disabled={currentPage === 1}>Back</button>
+                <span>Page{currentPage}</span>
+                <button onClick={nextPage} disabled={indexOfLastItem >= vendas.length}>Next</button>
             </div>
         </div>
     );

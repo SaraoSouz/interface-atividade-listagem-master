@@ -1,9 +1,16 @@
+.me-auto {
+    color: #ffffff;
+}
+
+
 .CtnNavbar {
-    background-color: #bbb;
+    background-color: blueviolet;
     height: 75px;
+
 }
 
 .logoAtividade {
     text-decoration: none;
-    color: #333;
+    color: #ffffff;
 }
+
